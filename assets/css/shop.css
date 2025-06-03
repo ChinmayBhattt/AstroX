@@ -1,0 +1,237 @@
+/* Shop Page Styles */
+
+.shop-header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.8)),
+                url('../images/shop-bg.jpg') center/cover;
+    padding: 2rem;
+    position: relative;
+}
+
+.shop-header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+.shop-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: var(--primary-color);
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 3rem 10%;
+    background: var(--primary-color);
+}
+
+/* Product Card */
+.product-card {
+    background: var(--secondary-color);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.coming-soon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 25px;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-to-cart:disabled {
+    background: rgba(102, 252, 241, 0.3);
+    cursor: not-allowed;
+}
+
+.add-to-cart:not(:disabled):hover {
+    background: #45a29e;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 5rem 10%;
+    background: var(--secondary-color);
+    text-align: center;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.newsletter-form input::placeholder {
+    color: var(--text-secondary);
+}
+
+.newsletter-form button {
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 25px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background: #45a29e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shop-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .categories {
+        padding: 1rem;
+    }
+
+    .products-grid {
+        padding: 2rem 5%;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

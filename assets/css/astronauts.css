@@ -1,0 +1,212 @@
+/* Astronauts Page Styles */
+
+.astronauts-header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.8)),
+                url('../images/space-station.jpg') center/cover;
+    padding: 2rem;
+    position: relative;
+}
+
+.astronauts-header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+.astronauts-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+/* Astronauts Grid */
+.astronauts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 5rem 10%;
+    background: var(--primary-color);
+}
+
+/* Astronaut Card */
+.astronaut-card {
+    position: relative;
+    height: 400px;
+    perspective: 1500px;
+    cursor: pointer;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-front {
+    background: var(--secondary-color);
+}
+
+.card-back {
+    background: var(--secondary-color);
+    transform: rotateY(180deg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.astronaut-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.astronaut-card:hover .card-back {
+    transform: rotateY(360deg);
+}
+
+.card-front img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.astronaut-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.astronaut-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.astronaut-info p {
+    color: var(--text-secondary);
+}
+
+/* Card Back Stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat .value {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.bio {
+    color: var(--text-secondary);
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.profile-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.profile-link:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Stats Section */
+.astronaut-stats {
+    padding: 5rem 10%;
+    background: var(--secondary-color);
+}
+
+.stat-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.stat-item p {
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .astronauts-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .astronauts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 3rem 5%;
+    }
+
+    .astronaut-card {
+        height: 350px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Missions - AstroX</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/missions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="/">ASTROX</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="rockets.html">Rockets</a></li>
+            <li><a href="missions.html" class="active">Missions</a></li>
+            <li><a href="astronauts.html">Astronauts</a></li>
+            <li><a href="shop.html">Space Shop</a></li>
+            <li><a href="contact.html" class="cta-button">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Missions Header -->
+    <header class="missions-header">
+        <h1>Space Missions</h1>
+        <p>Exploring the final frontier, one mission at a time</p>
+        <div class="next-launch">
+            <h2>Next Launch: Mars Colony One</h2>
+            <div class="countdown-container">
+                <div id="countdown" class="countdown">
+                    <div class="time">
+                        <h2 id="days">00</h2>
+                        <small>Days</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="hours">00</h2>
+                        <small>Hours</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="minutes">00</h2>
+                        <small>Minutes</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="seconds">00</h2>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <h2>Mission Timeline</h2>
+        <div class="timeline">
+            <!-- Future Mission -->
+            <div class="timeline-item future">
+                <div class="timeline-content">
+                    <h3>Mars Colony One</h3>
+                    <div class="date">December 25, 2025</div>
+                    <p>First human settlement mission to Mars, carrying habitation modules and life support systems.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="label">Duration</span>
+                            <span class="value">300 days</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Crew</span>
+                            <span class="value">6</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Vehicle</span>
+                            <span class="value">Nova X</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mission-details">Mission Details</a>
+                </div>
+            </div>
+
+            <!-- Current Mission -->
+            <div class="timeline-item current">
+                <div class="timeline-content">
+                    <h3>Lunar Gateway</h3>
+                    <div class="date">May 15, 2025</div>
+                    <p>Construction of permanent lunar space station in partnership with international space agencies.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="label">Status</span>
+                            <span class="value">In Progress</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Modules</span>
+                            <span class="value">3/5</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Crew</span>
+                            <span class="value">4</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mission-details">Live Updates</a>
+                </div>
+            </div>
+
+            <!-- Past Missions -->
+            <div class="timeline-item past">
+                <div class="timeline-content">
+                    <h3>Mars Sample Return</h3>
+                    <div class="date">September 3, 2024</div>
+                    <p>Successfully retrieved and returned first samples from Martian surface.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="label">Duration</span>
+                            <span class="value">442 days</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Samples</span>
+                            <span class="value">5 kg</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Status</span>
+                            <span class="value">Complete</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mission-details">View Results</a>
+                </div>
+            </div>
+
+            <div class="timeline-item past">
+                <div class="timeline-content">
+                    <h3>Asteroid Mining Demo</h3>
+                    <div class="date">March 15, 2024</div>
+                    <p>First successful demonstration of automated asteroid resource extraction.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="label">Target</span>
+                            <span class="value">2023 NX</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Resources</span>
+                            <span class="value">Water Ice</span>
+                        </div>
+                        <div class="stat">
+                            <span class="label">Status</span>
+                            <span class="value">Complete</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mission-details">View Results</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Stats -->
+    <section class="mission-stats-section">
+        <h2>Mission Statistics</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Total Missions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="18">0</div>
+                <div class="stat-label">Successful Launches</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-label">Active Missions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Planned Missions</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AstroX</h4>
+                <p>Making Life Multiplanetary</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="rockets.html">Rockets</a></li>
+                    <li><a href="missions.html">Missions</a></li>
+                    <li><a href="astronauts.html">Astronauts</a></li>
+                    <li><a href="shop.html">Space Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>info@astrox.com</li>
+                    <li>+1 (555) 123-4567</li>
+                    <li>Cape Canaveral, FL</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AstroX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/missions.js"></script>
+</body>
+</html>

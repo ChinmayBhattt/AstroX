@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shop - AstroX</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <a href="/">ASTROX</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="rockets.html">Rockets</a></li>
+            <li><a href="missions.html">Missions</a></li>
+            <li><a href="astronauts.html">Astronauts</a></li>
+            <li><a href="shop.html" class="active">Space Shop</a></li>
+            <li><a href="contact.html" class="cta-button">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Shop Header -->
+    <header class="shop-header">
+        <h1>Space Shop</h1>
+        <p>Official AstroX Merchandise</p>
+    </header>
+
+    <!-- Categories -->
+    <section class="categories">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="apparel">Apparel</button>
+        <button class="category-btn" data-category="models">Models</button>
+        <button class="category-btn" data-category="accessories">Accessories</button>
+        <button class="category-btn" data-category="collectibles">Collectibles</button>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid">
+        <!-- Apparel -->
+        <div class="product-card" data-category="apparel">
+            <div class="product-image">
+                <img src="assets/images/mission-jacket.jpg" alt="Mission Jacket">
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+            <div class="product-info">
+                <h3>Mission Jacket</h3>
+                <p class="price">$149.99</p>
+                <p class="description">Official AstroX mission jacket with Mars Colony patch</p>
+                <button class="add-to-cart" disabled>Coming Soon</button>
+            </div>
+        </div>
+
+        <!-- Models -->
+        <div class="product-card" data-category="models">
+            <div class="product-image">
+                <img src="assets/images/nova-x-model.jpg" alt="Nova X Model">
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+            <div class="product-info">
+                <h3>Nova X Model</h3>
+                <p class="price">$299.99</p>
+                <p class="description">1:100 scale model of our flagship rocket</p>
+                <button class="add-to-cart" disabled>Coming Soon</button>
+            </div>
+        </div>
+
+        <!-- Accessories -->
+        <div class="product-card" data-category="accessories">
+            <div class="product-image">
+                <img src="assets/images/astronaut-backpack.jpg" alt="Space Backpack">
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+            <div class="product-info">
+                <h3>Space Backpack</h3>
+                <p class="price">$89.99</p>
+                <p class="description">Astronaut-inspired backpack with multiple compartments</p>
+                <button class="add-to-cart" disabled>Coming Soon</button>
+            </div>
+        </div>
+
+        <!-- Collectibles -->
+        <div class="product-card" data-category="collectibles">
+            <div class="product-image">
+                <img src="assets/images/mission-patch.jpg" alt="Mission Patch">
+                <div class="coming-soon">Coming Soon</div>
+            </div>
+            <div class="product-info">
+                <h3>Mars Colony Patch</h3>
+                <p class="price">$24.99</p>
+                <p class="description">Limited edition Mars Colony mission patch</p>
+                <button class="add-to-cart" disabled>Coming Soon</button>
+            </div>
+        </div>
+
+        <!-- Add more product cards as needed -->
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Be the first to know when our shop launches and get exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AstroX</h4>
+                <p>Making Life Multiplanetary</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="rockets.html">Rockets</a></li>
+                    <li><a href="missions.html">Missions</a></li>
+                    <li><a href="astronauts.html">Astronauts</a></li>
+                    <li><a href="shop.html">Space Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>info@astrox.com</li>
+                    <li>+1 (555) 123-4567</li>
+                    <li>Cape Canaveral, FL</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AstroX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/shop.js"></script>
+</body>
+</html>
